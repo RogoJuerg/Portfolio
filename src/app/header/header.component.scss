@@ -1,0 +1,47 @@
+// presets
+
+$primary: #126BFB;
+$secondary: #EEF4FF;
+$action: #7BB8FA;
+$gray: #5b5963;
+$black: #282828;
+
+header {
+    border-bottom: 1px solid $black;
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                margin-left: 32px;
+                margin-right: 32px;
+                font-weight: 700;
+                color: rgba(0, 0, 0, 0.3);
+                border-bottom: 2px solid transparent;
+                cursor: pointer;
+
+                &:hover {
+                    color: $black;
+                    border-bottom: 2px solid $black;
+                }
+            }
+        }
+
+        img {
+            width: 48px;
+            margin-left: 32px;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.link-active {
+    color: $black;
+    border-bottom: 2px solid $black;
+}

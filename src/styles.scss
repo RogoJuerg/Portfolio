@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+// presets
+
+$primary: #126BFB;
+$secondary: #EEF4FF;
+$action: #7BB8FA;
+$gray: #5b5963;
+$black: #282828;
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 32px;
+}
+p {
+    font-size: 18px;
+}
+.m-16 {
+    margin: 16px;
+}
+.m-32 {
+    margin: 32px;
+}
+.m-46 {
+    margin: 46px;
+}
+.m-142 {
+    margin: 142px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+}
