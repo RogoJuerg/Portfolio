@@ -7,32 +7,42 @@ $gray: #5b5963;
 $black: #282828;
 
 header {
+    display: flex;
     border-bottom: 1px solid $black;
+    background-color: black;
 
     .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+
         ul {
             display: flex;
             list-style-type: none;
+            position: relative;
 
             li {
                 margin-left: 32px;
                 margin-right: 32px;
                 font-weight: 700;
-                color: rgba(0, 0, 0, 0.3);
+                color: $gray;
                 border-bottom: 2px solid transparent;
+                transition: all 125ms ease-in-out;
                 cursor: pointer;
-
                 &:hover {
-                    color: $black;
-                    border-bottom: 2px solid $black;
+                    color: $secondary;
+                    text-shadow: 0 0 10px $action,
+                    0 0 20px $action,
+                    0 0 40px $action;
+                    -webkit-box-reflect: below -12px linear-gradient(transparent, $action);
+                    transition: all 125ms ease-in-out;
                 }
             }
         }
 
         img {
+            filter: invert(1);
             width: 48px;
             margin-left: 32px;
             height: 100%;
