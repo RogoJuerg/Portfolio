@@ -3,19 +3,27 @@
 $primary: #126BFB;
 $secondary: #EEF4FF;
 $action: #7BB8FA;
-$gray: #5b5963;
+$gray: #3e3d42;
 $black: #282828;
 
 header {
+    position: fixed;
     display: flex;
-    border-bottom: 1px solid $black;
-    background-color: black;
+    justify-content: center;
+    // border-bottom: 1px solid $black;
+    background-image: linear-gradient(black, transparent);
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    
 
     .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        max-width: 1200px;
 
         ul {
             display: flex;
@@ -23,28 +31,94 @@ header {
             position: relative;
 
             li {
-                margin-left: 32px;
-                margin-right: 32px;
+                margin-left: 64px;
                 font-weight: 700;
                 color: $gray;
-                border-bottom: 2px solid transparent;
                 transition: all 125ms ease-in-out;
                 cursor: pointer;
+
                 &:hover {
                     color: $secondary;
                     text-shadow: 0 0 10px $action,
-                    0 0 20px $action,
-                    0 0 40px $action;
-                    -webkit-box-reflect: below -12px linear-gradient(transparent, $action);
+                        0 0 20px $action,
+                        0 0 40px $action;
+                    -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
                     transition: all 125ms ease-in-out;
+                    animation: animReflection 75ms ease-in-out;
                 }
             }
+        }
+
+        @keyframes animReflection {
+            0% {
+                -webkit-box-reflect: below 0px linear-gradient(transparent, $action);
+            }
+
+            5% {
+                -webkit-box-reflect: below -1px linear-gradient(transparent, $action);
+            }
+
+            10% {
+                -webkit-box-reflect: below -2px linear-gradient(transparent, $action);
+            }
+
+            15% {
+                -webkit-box-reflect: below -3px linear-gradient(transparent, $action);
+            }
+
+            20% {
+                -webkit-box-reflect: below -4px linear-gradient(transparent, $action);
+            }
+
+            30% {
+                -webkit-box-reflect: below -5px linear-gradient(transparent, $action);
+            }
+
+            40% {
+                -webkit-box-reflect: below -6px linear-gradient(transparent, $action);
+            }
+
+            50% {
+                -webkit-box-reflect: below -7px linear-gradient(transparent, $action);
+            }
+
+            60% {
+                -webkit-box-reflect: below -8px linear-gradient(transparent, $action);
+            }
+
+            70% {
+                -webkit-box-reflect: below -9px linear-gradient(transparent, $action);
+            }
+
+            80% {
+                -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
+            }
+
+            90% {
+                -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
+            }
+
+            100% {
+                -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
+            }
+        }
+
+        @keyframes animActive {
+            0%, 100% {
+                text-shadow: none;
+            }
+
+            25%, 75% {
+                text-shadow: 0 0 10px $action,
+                    0 0 20px $action,
+                    0 0 40px $action;
+            }
+
         }
 
         img {
             filter: invert(1);
             width: 48px;
-            margin-left: 32px;
             height: 100%;
             object-fit: cover;
         }
@@ -52,6 +126,12 @@ header {
 }
 
 .link-active {
-    color: $black;
-    border-bottom: 2px solid $black;
+    color: $secondary!important;
+    -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
+    animation: animActive 5s ease-in-out infinite;
+    transition: all 125ms ease-in-out;
+    &:hover {
+        animation: none!important;
+        transition: all 125ms ease-in-out;
+    }
 }
