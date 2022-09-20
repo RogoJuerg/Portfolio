@@ -1,0 +1,76 @@
+// presets
+
+$primary: #126BFB;
+$secondary: #EEF4FF;
+$action: #7BB8FA;
+$gray: #3e3d42;
+$black: #282828;
+
+h1 {
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    flex-direction: column;
+    transition: all 225ms ease-in-out;
+    position: relative;
+    &:hover {
+        background: linear-gradient(rgba(217, 255, 0, 0.333), rgba(0, 255, 242, 0.333));
+        transition: all 125ms ease-in-out;
+    }
+
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 12px 0 12px 0;
+
+        h2 {
+            margin: 6px 0 40px 0;
+            color: $action;
+            text-shadow: 0 0 10px $action,
+                0 0 20px $action,
+                0 0 30px $action;
+            -webkit-box-reflect: below -8px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        }
+
+        p {
+            margin: 0;
+            color: $secondary;
+            text-shadow: 0 0 10px $action,
+                0 0 20px $action;
+            -webkit-box-reflect: below -8px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+        }
+    }
+
+    img {
+        width: 400px;
+        height: 100%;
+        object-fit: contain;
+        -webkit-box-reflect: below -112px linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+    }
+}
