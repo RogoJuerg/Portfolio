@@ -33,5 +33,25 @@ body {
     font-family: 'Karla', sans-serif;
     font-weight: 400;
     background-color: black;
-    height: 3000px;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $black;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #7bb8faa4;
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $action;
+  }

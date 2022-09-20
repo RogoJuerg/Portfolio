@@ -5,16 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TopInfoComponent } from './top-info/top-info.component';
+import { SkillsSectionComponent } from './skills-section/skills-section.component';
+import { AngularTiltModule } from 'angular-tilt';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TopInfoComponent
+    TopInfoComponent,
+    SkillsSectionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularTiltModule
   ],
   providers: [],
   bootstrap: [AppComponent]

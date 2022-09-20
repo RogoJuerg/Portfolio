@@ -2,7 +2,50 @@
     display: flex;
     justify-content: center;
 }
+
 .cont-2 {
     width: 100%;
     max-width: 1200px;
+}
+
+.bubbles {
+    opacity: 1;
+    z-index: -1;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    span {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: rgba(0, 255, 242, 0.333);
+        margin: 0 4px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 255, 242, 0.333),
+            0 0 50px rgba(0, 255, 242, 0.333),
+            0 0 100px rgba(0, 255, 242, 0.333);
+        animation: animate 15s linear infinite;
+        animation-duration: calc(200s / var(--i));
+    }
+
+    span:nth-child(even) {
+        background: rgba(217, 255, 0, 0.333);
+        box-shadow: 0 0 10px rgba(217, 255, 0, 0.333),
+            0 0 50px rgba(217, 255, 0, 0.333),
+            0 0 100px rgba(217, 255, 0, 0.333);
+    }
+
+    @keyframes animate {
+        0% {
+            transform: translateY(150vh) scale(0.5) translateX(calc(10px * var(--j)));
+        }
+
+        100% {
+            transform: translateY(-10vh) scale(3) translateX(0px);
+        }
+    }
 }
