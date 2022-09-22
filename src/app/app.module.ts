@@ -9,6 +9,7 @@ import { SkillsSectionComponent } from './skills-section/skills-section.componen
 import { AngularTiltModule } from 'angular-tilt';
 import { MyWorkSectionComponent } from './my-work-section/my-work-section.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
+import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AboutMeSectionComponent } from './about-me-section/about-me-section.com
     TopInfoComponent,
     SkillsSectionComponent,
     MyWorkSectionComponent,
-    AboutMeSectionComponent
+    AboutMeSectionComponent,
+    ContactMeSectionComponent
   ],
   imports: [
     BrowserModule,
