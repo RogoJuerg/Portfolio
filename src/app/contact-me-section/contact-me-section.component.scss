@@ -1,27 +1,189 @@
+// presets
+
+$primary: #126BFB;
+$secondary: #EEF4FF;
+$action: #7BB8FA;
+$gray: #3e3d42;
+$black: #282828;
+
 .form-cont {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+
     .form-card {
-        position: relative;
-        width: 80%;
-        height: 500px;
+        width: 100%;
         margin: 30px;
         box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         background: rgba(255, 255, 255, 0.2);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
         border-left: 1px solid rgba(255, 255, 255, 0.2);
         backdrop-filter: blur(5px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        strong {
+            text-decoration: underline;
+            color: #EEF4FF;
+        }
+
+        .form {
+            width: 50%;
+        }
+
         h2 {
+            text-shadow: 0 0 10px $action,
+                0 0 20px $action;
+            color: $action;
 
         }
+
         p {
-            
+            text-shadow: 0 0 10px $action,
+                0 0 20px $action;
+            color: $action;
+        }
+        input {
+            background-color: #282828;
+            border-radius: 20px;
+            height: 40px;
+            width: 100%;
+            color: $action;
+            font-weight: 600;
+            padding: 0 12px 0 12px;
+            border: 1px solid transparent;
+            &:focus {
+                border:1px solid $action;
+                box-shadow: 0 0 10px $action,
+                0 0 20px $action;
+            }
+        }
+
+        textarea {
+            font-family: 'Karla', sans-serif;
+            background-color: #282828;
+            border-radius: 20px;
+            height: 200px;
+            width: 100%;
+            color: $action;
+            font-weight: 600;
+            padding: 12px;
+            resize: none;
+            border: 1px solid transparent;
+            &:focus {
+                border:1px solid $action;
+                box-shadow: 0 0 10px $action,
+                0 0 20px $action;
+            }
+        }
+
+        .button-cont {
+            margin: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                font-size: 1.4em;
+                position: relative;
+                background: black;
+                border: 1px solid $action;
+                border-radius: 20px;
+                color: $gray;
+                text-decoration: none;
+                letter-spacing: 0.1em;
+                font-weight: 600;
+                padding: 16px 64px;
+                transition: 125ms;
+                cursor: pointer;
+
+                &:hover {
+                    letter-spacing: 0.2em;
+                    background: black;
+                    color: $action;
+                    box-shadow: 0 0 10px $action,
+                        0 0 20px $action;
+                    text-shadow: 0 0 10px $action,
+                        0 0 20px $action;
+
+                    i::before {
+                        left: 0%;
+                        transform: translateX(-50%) rotate(45deg);
+                        box-shadow: 40px 40px $action;
+                        border-bottom-left-radius: 0;
+                    }
+
+                    i::after {
+                        left: 100%;
+                        transform: translateX(-50%) rotate(-45deg);
+                        box-shadow: 40px -40px $action;
+                        border-top-right-radius: 0;
+                    }
+                }
+
+                &:active {
+                    background-color: $action;
+                    color: #282828;
+
+                    i::before {
+                        left: 50%;
+                        transform: translateX(-50%) rotate(45deg);
+                        box-shadow: 40px 40px $action;
+                    }
+
+                    i::after {
+                        left: 50%;
+                        transform: translateX(-50%) rotate(-45deg);
+                        box-shadow: 40px -40px $action;
+                    }
+                }
+
+                ::before {
+                    content: '';
+                    position: absolute;
+                    inset: 2px;
+                    background: black;
+
+                }
+
+                i {
+                    position: absolute;
+                    inset: 0;
+                    display: block;
+                }
+
+                i::before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    left: 100%;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 10px;
+                    background-color: black;
+                    border: 2px solid $action;
+                    transition: 125ms;
+                    border-bottom-left-radius: 20px;
+                }
+
+                i::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -6px;
+                    left: 0;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 10px;
+                    background-color: black;
+                    border: 2px solid $action;
+                    transition: 125ms;
+                    border-top-right-radius: 20px;
+                }
+            }
+
         }
     }
 }
