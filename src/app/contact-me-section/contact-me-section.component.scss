@@ -55,10 +55,18 @@ $black: #282828;
             font-weight: 600;
             padding: 0 12px 0 12px;
             border: 1px solid transparent;
+            transition: all 125ms ease-in-out;
             &:focus {
                 border:1px solid $action;
                 box-shadow: 0 0 10px $action,
                 0 0 20px $action;
+                transition: all 125ms ease-in-out;
+            }
+            &:hover {
+                border:1px solid $action;
+                box-shadow: 0 0 10px $action,
+                0 0 20px $action;
+                transition: all 125ms ease-in-out;
             }
         }
 
@@ -73,10 +81,18 @@ $black: #282828;
             padding: 12px;
             resize: none;
             border: 1px solid transparent;
+            transition: all 125ms ease-in-out;
             &:focus {
                 border:1px solid $action;
                 box-shadow: 0 0 10px $action,
                 0 0 20px $action;
+                transition: all 125ms ease-in-out;
+            }
+            &:hover {
+                border:1px solid $action;
+                box-shadow: 0 0 10px $action,
+                0 0 20px $action;
+                transition: all 125ms ease-in-out;
             }
         }
 
@@ -100,7 +116,7 @@ $black: #282828;
                 transition: 125ms;
                 cursor: pointer;
 
-                &:hover {
+                &:hover, &:focus {
                     letter-spacing: 0.2em;
                     background: black;
                     color: $action;
