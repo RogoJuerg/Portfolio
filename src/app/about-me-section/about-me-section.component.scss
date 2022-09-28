@@ -16,6 +16,7 @@ main {
     width: 100%;
     height: 100vh;
     flex-direction: column;
+    margin: 48px 0 48px 0;
 
     .top {
         width: 100%;
@@ -52,11 +53,10 @@ main {
             flex-wrap: wrap;
 
             h2 {
-                color: $action;
+                color: $secondary;
                 text-shadow: 0 0 10px $action,
                     0 0 20px $action,
                     0 0 40px $action;
-                ;
             }
 
             p {
@@ -103,6 +103,7 @@ main {
 
             h3 {
                 margin-top: 48px;
+                color: $secondary;
             }
 
             p {}

@@ -1,5 +1,5 @@
 <div class="cont-1">
-    <div class="cont-2">
+    <div *ngIf="router.url === '/'" class="cont-2">
         <app-header></app-header>
         <app-top-info></app-top-info>
         <app-skills-section></app-skills-section>
@@ -7,6 +7,9 @@
         <app-about-me-section></app-about-me-section>
         <app-contact-me-section></app-contact-me-section>
         <app-footer></app-footer>
+    </div>
+    <div *ngIf="router.url === '/imprint'" class="cont-2">
+        <app-imprint></app-imprint>
     </div>
     <div class="bubbles">
         <span style="--i:31; --j:100"></span>

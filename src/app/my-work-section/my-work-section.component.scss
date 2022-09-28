@@ -8,30 +8,39 @@ $black: #282828;
 
 h1 {
     color: white;
+    margin: 0;
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    flex-direction: column;
+
+    h2 {
+        text-shadow: 0 0 10px $action,
+            0 0 20px $action,
+            0 0 30px $action;
+        color: $secondary;
+        margin: 48px 0 48px 0;
+    }
 }
 
 .card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
+    margin: 80px 0 80px 0;
 }
 
 .card {
     display: flex;
     justify-content: center;
-    padding: 24px;
+    padding: 48px;
     position: relative;
-    width: 400px;
+    width: 80%;
     height: 300px;
     box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
@@ -42,43 +51,113 @@ main {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-left: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
-    flex-direction: column;
     position: relative;
-    margin: 12px;
-    &:hover ~ .overlay-cont {
-        display: block;
+    margin: 48px;
+
+
+        .img-cont {
+            display: flex;
+                position: absolute;
+                top: -40px;
+                padding: 16px;
+                background: $black;
+                border-radius: 100%;
+                border-top: 1px solid #8a888f;
+                border-left: 1px solid #8a888f;
+                -webkit-box-reflect: below 5px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+                overflow: hidden;
+        }
+        img {
+            height: 42px;
+            width: 42px;
+            object-fit: cover;
+        }
+
+    .right-side {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin: 12px;
+        height: 100%;
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2 {
+                margin: 6px 0 40px 0;
+                color: $secondary;
+                text-shadow: 0 0 10px $action,
+                    0 0 20px $action,
+                    0 0 30px $action;
+                -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0, 0, 0, 0.15));
+            }
+
+            p {
+                margin: 0;
+                color: $action;
+                text-shadow: 0 0 10px $action,
+                    0 0 20px $action;
+                -webkit-box-reflect: below -16px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+                width: 75%;
+                text-align: center;
+            }
+        }
+
+
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 32px;
+
+            button {
+                background-color: transparent;
+                padding: 12px 24px 12px 24px;
+                margin: 8px;
+                width: 100px;
+                color: $action;
+                border-radius: 20px;
+                border: 1px solid $action;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 125ms ease-in-out;
+
+                &:hover {
+                    background-color: #7BB8FA;
+                    transition: all 75ms ease-in-out;
+                    color: black;
+                    box-shadow: 0 0 10px $action,
+                        0 0 20px $action;
+                }
+            }
+        }
     }
 
-    .text {
+    .left-side {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin: 12px 0 12px 0;
+        margin: 24px;
 
-        h2 {
-            margin: 6px 0 40px 0;
-            color: $action;
-            text-shadow: 0 0 10px $action,
-                0 0 20px $action,
-                0 0 30px $action;
-            -webkit-box-reflect: below -8px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+        img {
+            width: 400px;
+            height: 100%;
+            object-fit: contain;
+            -webkit-box-reflect: below -112px linear-gradient(transparent, rgba(0, 0, 0, 0.05));
+            transition: all 250ms ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+                transition: all 250ms ease-in-out;
+            }
         }
 
-        p {
-            margin: 0;
-            color: $secondary;
-            text-shadow: 0 0 10px $action,
-                0 0 20px $action;
-            -webkit-box-reflect: below -8px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
-        }
-    }
-
-    img {
-        width: 200px;
-        height: 100%;
-        object-fit: contain;
-        -webkit-box-reflect: below -112px linear-gradient(transparent, rgba(0, 0, 0, 0.05));
     }
 
     .overlay-cont {
@@ -93,7 +172,7 @@ main {
         align-items: center;
         transition: all 500ms ease-in-out;
 
-        
+
 
         button {
             display: none;
