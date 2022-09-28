@@ -8,20 +8,20 @@ $black: #282828;
 $bgyellow: rgba(217, 255, 0, 0.534);
 $bgblue: rgba(0, 255, 242, 0.333);
 
-.impressum {
+.main {
     margin-top: 160px;
     margin-bottom: 80px;
     color: $action;
 }
 
-h2 {
+h2, h3, h1 {
     color: $secondary;
     text-shadow: 0 0 10px $action,
         0 0 20px $action,
         0 0 40px $action;
 }
 
-p, a {
+p, a, li {
     color: $action;
     text-shadow: 0 0 10px $action,
         0 0 20px $action;
