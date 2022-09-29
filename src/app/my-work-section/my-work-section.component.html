@@ -1,56 +1,27 @@
 <main>
     <h2>My Work</h2>
+    <button (click)="changeSort('javascript')">JavaScript</button>
+    <button (click)="changeSort('angular')">Angular</button>
+    <button (click)="changeSort('all')">All</button>
     <div class="card-container">
-
-        <!-- Lieferheroes -->
-        <div class="card">
-            <div class="img-cont" style="right: 0;">
-                <img src="../../assets/img/icons/javascript.png">
+        <!-- My Project will be rendered here with a for loop -->
+        <div class="card" *ngFor="let project of filterFunk()">
+            <div class="img-cont" *ngFor="let language of project.programming; let i = index" [ngStyle]="{'right.px': 20 + (i * 90)}">
+                <img src="{{ language }}">
             </div>
-
-            <div class="img-cont" style="right: 80px;">
-                <img src="../../assets/img/icons/htmlcss.png">
-            </div>
-
             <div class="left-side">
-                <img src="../../assets/img/App-Showcase-lieferheroes.png">
+                <img src="{{ project.appImg }}">
             </div>
             <div class="right-side">
                 <div class="text">
-                    <h2>Lieferheroes</h2>
-                    <p>A clone of a popular food delivery service in germany written in vanilla JavaScript</p>
+                    <h2>{{ project.name }}</h2>
+                    <p>{{ project.description }}</p>
                 </div>
                 <div class="buttons">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/RogoJuerg/Join"><button>Git</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://juergen-rogozin.developerakademie.net/Lieferando/index.html"><button>Try it</button></a>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ project.linkGit }}"><button>Git</button></a>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ project.linkPage }}"><button>Try it</button></a>
                 </div>
             </div>
         </div>
-
-        <!-- JOIN -->
-        <div class="card">
-            <div class="img-cont" style="right: 0;">
-                <img src="../../assets/img/icons/javascript.png">
-            </div>
-
-            <div class="img-cont" style="right: 80px;">
-                <img src="../../assets/img/icons/htmlcss.png">
-            </div>
-
-            <div class="left-side">
-                <img src="../../assets/img/App-Showcase-Join.png">
-            </div>
-            <div class="right-side">
-                <div class="text">
-                    <h2>JOIN</h2>
-                    <p>A Kanban board written in vanilla JavaScript and created as a group project</p>
-                </div>
-                <div class="buttons">
-                    <a target="_blank" rel="noopener noreferrer" href="https://github.com/RogoJuerg/Join"><button>Git</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="https://gruppe-256.developerakademie.net/index.html"><button>Try it</button></a>
-                </div>
-            </div>
-        </div>
-
     </div>
 </main>
