@@ -8,9 +8,16 @@ $black: #282828;
 
 .main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
 }
 
 .name {
@@ -171,5 +178,42 @@ h1 {
             border-top-right-radius: 20px;
         }
     }
+}
 
+@media only screen and (max-width: 1064px) {
+    .content {
+        width: 75%;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .text {
+        margin-left: 48px;
+    }
+}
+
+@media only screen and (max-width: 940px) {
+    .content {
+        width: 80%;
+        margin-left: 32px;
+        margin-right: 32px;
+        flex-direction: column;
+    }
+
+    .text {
+        margin-left: 24px;
+        margin-top: 48px;
+
+        h1 {
+            font-size: 48px;
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .main {
+        margin-top: 220px;
+        margin-bottom: 220px;
+    }
 }

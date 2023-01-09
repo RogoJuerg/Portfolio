@@ -7,56 +7,71 @@ $gray: #3e3d42;
 $black: #282828;
 
 h1 {
-    font-size: 60px;
+  font-size: 60px;
 }
+
 h2 {
-    font-size: 32px;
+  font-size: 32px;
 }
+
 p {
-    font-size: 18px;
+  font-size: 18px;
 }
+
 .m-16 {
-    margin: 16px;
+  margin: 16px;
 }
+
 .m-32 {
-    margin: 32px;
+  margin: 32px;
 }
+
 .m-46 {
-    margin: 46px;
+  margin: 46px;
 }
+
 .m-142 {
-    margin: 142px;
+  margin: 142px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    font-family: 'Karla', sans-serif;
-    font-weight: 400;
-    background-color: black;
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  background-color: black;
 }
+
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $black;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(rgba(217, 255, 0, 0.333), rgba(0, 255, 242, 0.333));
-    border-radius: 20px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(rgba(217, 255, 0, 0.5), rgba(0, 255, 242, 0.486));
-  }
+  width: 10px;
+}
 
-  .component-space {
-    margin-top: 48px;
-    margin-bottom: 48px;
-  }
+/* Track */
+::-webkit-scrollbar-track {
+  background: $black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(rgba(217, 255, 0, 0.333), rgba(0, 255, 242, 0.333));
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(rgba(217, 255, 0, 0.5), rgba(0, 255, 242, 0.486));
+}
+
+.component-space {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}

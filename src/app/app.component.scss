@@ -41,7 +41,7 @@
 
     @keyframes animate {
         0% {
-            transform: translateY(2000px) scale(0.5) translateX(calc(10px * var(--j)));
+            transform: translateY(2000px) scale(0.5) translateX(calc(2px * var(--j)));
         }
 
         100% {

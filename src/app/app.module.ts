@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,9 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AngularTiltModule
+    AngularTiltModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

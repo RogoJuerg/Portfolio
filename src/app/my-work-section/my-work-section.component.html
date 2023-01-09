@@ -1,12 +1,18 @@
-<main>
+<main id="myWork">
     <h2>My Work</h2>
-    <button (click)="changeSort('javascript')">JavaScript</button>
-    <button (click)="changeSort('angular')">Angular</button>
-    <button (click)="changeSort('all')">All</button>
+    <div class="filter-buttons">
+        <button (click)="changeSort('all')">All</button>
+        <div class="bottom-btn">
+            <button (click)="changeSort('javascript')">JavaScript</button>
+            <button (click)="changeSort('angular')">Angular</button>
+        </div>
+
+    </div>
     <div class="card-container">
         <!-- My Project will be rendered here with a for loop -->
-        <div class="card" *ngFor="let project of filterFunk()">
-            <div class="img-cont" *ngFor="let language of project.programming; let i = index" [ngStyle]="{'right.px': 20 + (i * 90)}">
+        <div class="card" *ngFor="let project of filterFunc()">
+            <div class="img-cont" *ngFor="let language of project.programming; let i = index"
+                [ngStyle]="{'right.px': 20 + (i * 90)}">
                 <img src="{{ language }}">
             </div>
             <div class="left-side">
@@ -19,7 +25,8 @@
                 </div>
                 <div class="buttons">
                     <a target="_blank" rel="noopener noreferrer" href="{{ project.linkGit }}"><button>Git</button></a>
-                    <a target="_blank" rel="noopener noreferrer" href="{{ project.linkPage }}"><button>Try it</button></a>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ project.linkPage }}"><button>Try
+                            it</button></a>
                 </div>
             </div>
         </div>

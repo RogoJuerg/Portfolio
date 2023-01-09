@@ -15,7 +15,7 @@ header {
     right: 0;
     top: 0;
     z-index: 999;
-    
+    height: 84px;
 
     .header-content {
         display: flex;
@@ -23,6 +23,13 @@ header {
         align-items: center;
         width: 100%;
         max-width: 1200px;
+
+        .menu-button {
+            display: none;
+            width: 32px;
+            height: 32px;
+            object-fit: cover;
+        }
 
         ul {
             display: flex;
@@ -103,11 +110,14 @@ header {
         }
 
         @keyframes animActive {
-            0%, 100% {
+
+            0%,
+            100% {
                 text-shadow: none;
             }
 
-            25%, 75% {
+            25%,
+            75% {
                 text-shadow: 0 0 10px $action,
                     0 0 20px $action,
                     0 0 40px $action;
@@ -115,22 +125,35 @@ header {
 
         }
 
-        img {
+        .imgInvert {
             filter: invert(1);
             width: 48px;
             height: 100%;
             object-fit: cover;
         }
+
+        @media only screen and (max-width: 720px) {
+            ul {
+                a {
+                    display: none;
+                }
+            }
+
+            .menu-button {
+                display: block;
+            }
+        }
     }
 }
 
 .link-active {
-    color: $secondary!important;
+    color: $secondary !important;
     -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
     animation: animActive 5s ease-in-out infinite;
     transition: all 125ms ease-in-out;
+
     &:hover {
-        animation: none!important;
+        animation: none !important;
         transition: all 125ms ease-in-out;
     }
 }

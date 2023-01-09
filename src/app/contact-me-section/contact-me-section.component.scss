@@ -25,13 +25,33 @@ $black: #282828;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
         strong {
             text-decoration: underline;
-            color: #EEF4FF;
+            color: $secondary;
+            transition: all 125ms ease-in-out;
+            &:hover {
+                color: $action;
+                transition: all 125ms ease-in-out;
+            }
         }
 
         .form {
             width: 50%;
+            
+        }
+
+        @media only screen and (max-width: 950px) {
+            .form {
+                width: 70%;
+            }
+            .title {
+                width: 80%;
+            }
+            .form-card {
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         h2 {
@@ -46,6 +66,7 @@ $black: #282828;
                 0 0 20px $action;
             color: $action;
         }
+
         input {
             background-color: #282828;
             border-radius: 20px;
@@ -56,16 +77,18 @@ $black: #282828;
             padding: 0 12px 0 12px;
             border: 1px solid transparent;
             transition: all 125ms ease-in-out;
+
             &:focus {
-                border:1px solid $action;
+                border: 1px solid $action;
                 box-shadow: 0 0 10px $action,
-                0 0 20px $action;
+                    0 0 20px $action;
                 transition: all 125ms ease-in-out;
             }
+
             &:hover {
-                border:1px solid $action;
+                border: 1px solid $action;
                 box-shadow: 0 0 10px $action,
-                0 0 20px $action;
+                    0 0 20px $action;
                 transition: all 125ms ease-in-out;
             }
         }
@@ -82,16 +105,18 @@ $black: #282828;
             resize: none;
             border: 1px solid transparent;
             transition: all 125ms ease-in-out;
+
             &:focus {
-                border:1px solid $action;
+                border: 1px solid $action;
                 box-shadow: 0 0 10px $action,
-                0 0 20px $action;
+                    0 0 20px $action;
                 transition: all 125ms ease-in-out;
             }
+
             &:hover {
-                border:1px solid $action;
+                border: 1px solid $action;
                 box-shadow: 0 0 10px $action,
-                0 0 20px $action;
+                    0 0 20px $action;
                 transition: all 125ms ease-in-out;
             }
         }
@@ -116,7 +141,8 @@ $black: #282828;
                 transition: 125ms;
                 cursor: pointer;
 
-                &:hover, &:focus {
+                &:hover,
+                &:focus {
                     letter-spacing: 0.2em;
                     background: black;
                     color: $action;
@@ -201,5 +227,14 @@ $black: #282828;
             }
 
         }
+    }
+}
+
+
+
+@media only screen and (max-width: 500px) {
+    .form-cont {
+        margin-top: 150px;
+        margin-bottom: 150px;
     }
 }
