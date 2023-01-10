@@ -6,6 +6,86 @@ $action: #7BB8FA;
 $gray: #3e3d42;
 $black: #282828;
 
+
+
+@keyframes openMenu {
+    0% {
+        transform: translateX(125px);
+        height: 75px;
+    }
+
+    100% {
+        transform: translateX(0px);
+        height: 250px;
+    }
+}
+
+.mobile-menu {
+    right: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 75px;
+    background-image: linear-gradient(black, rgba(128, 128, 128, 0.171));
+    transform: translateX(125px);
+    border-bottom-left-radius: 20%;
+    position: relative;
+
+
+
+    .menu-button {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        top: 24px;
+        left: 24px;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        position: absolute;
+        flex-direction: column;
+        right: 32px;
+
+        li {
+            font-weight: 700;
+            color: $secondary;
+            transition: all 125ms ease-in-out;
+            cursor: pointer;
+            margin-top: 12px;
+            margin-bottom: 12px;
+
+            &:hover {
+                color: $secondary;
+                text-shadow: 0 0 10px $action,
+                    0 0 20px $action,
+                    0 0 40px $action;
+                -webkit-box-reflect: below -10px linear-gradient(transparent, $action);
+                transition: all 125ms ease-in-out;
+                animation: animReflection 75ms ease-in-out;
+            }
+        }
+    }
+
+}
+
+.openMenu {
+    animation: openMenu 225ms ease-in-out !important;
+    transform: translateX(0px);
+    height: 250px;
+}
+
+.closeMenu {
+    animation: openMenu 1s reverse ease-in-out !important;
+    transform: translateX(125px);
+        height: 75px;
+}
+
+
 header {
     position: fixed;
     display: flex;
@@ -25,7 +105,6 @@ header {
         max-width: 1200px;
 
         .menu-button {
-            display: none;
             width: 32px;
             height: 32px;
             object-fit: cover;
@@ -137,10 +216,6 @@ header {
                 a {
                     display: none;
                 }
-            }
-
-            .menu-button {
-                display: block;
             }
         }
     }

@@ -12,6 +12,10 @@ $bgblue: rgba(0, 255, 242, 0.333);
     margin-top: 160px;
     margin-bottom: 80px;
     color: $action;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h2, h3, h1 {
@@ -27,4 +31,22 @@ p, a, li {
         0 0 20px $action;
     padding: 24px;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 700px){
+    .main {
+        width: 80vw;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p, a, li {
+        font-size: 12px;
+    }
 }

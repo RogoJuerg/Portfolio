@@ -2,11 +2,36 @@
     <div class="header-content m-16">
         <a href="/"><img class="imgInvert" src="../assets/img/logo.png"></a>
         <ul>
-            <a href="/"><li class="link-active">HOME</li></a>
-            <a href="#mySkills"><li>MY SKILLS</li></a>
-            <a href="#myWork"><li>MY WORK</li></a>
-            <a href="#aboutMe"><li>ABOUT ME</li></a>
+            <a href="/">
+                <li class="link-active">HOME</li>
+            </a>
+            <a href="#mySkills">
+                <li>MY SKILLS</li>
+            </a>
+            <a href="#myWork">
+                <li>MY WORK</li>
+            </a>
+            <a href="#aboutMe">
+                <li>ABOUT ME</li>
+            </a>
         </ul>
-        <img class="menu-button" src="../../assets/img/icons/menu.png">
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu" (click)="toggleMenu()">
+        <img class="menu-button" src="../../assets/img/icons/menu.png" >
+        <ul id="mobileButtons" class="d-none">
+            <a href="/">
+                <li>HOME</li>
+            </a>
+            <a href="#mySkills">
+                <li>MY SKILLS</li>
+            </a>
+            <a href="#myWork">
+                <li>MY WORK</li>
+            </a>
+            <a href="#aboutMe">
+                <li>ABOUT ME</li>
+            </a>
+        </ul>
     </div>
 </header>
