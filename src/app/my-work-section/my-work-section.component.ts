@@ -38,9 +38,18 @@ export class MyWorkSectionComponent implements OnInit {
       name : 'My Portfolio',
       programming : ['../../assets/img/icons/angular.png','../../assets/img/icons/typescript.png','../../assets/img/icons/htmlcss.png'],
       appImg : '../../assets/img/App-Showcase-portfolio.png',
-      linkGit : 'https://github.com/RogoJuerg/El-Pollo-Loco',
+      linkGit : 'https://github.com/RogoJuerg/Portfolio',
       linkPage : 'https://juergen-rogozin.developerakademie.net/El%20Pollo%20Loco/index.html',
       description : 'This is my personal portfolio page. It is written in TypeScript using the Angular framework.',
+      language : 'angular'
+    },
+    {
+      name : 'Simple CRM',
+      programming : ['../../assets/img/icons/angular.png','../../assets/img/icons/typescript.png','../../assets/img/icons/htmlcss.png'],
+      appImg : '../../assets/img/App-Showcase-simplecrm.png',
+      linkGit : 'https://github.com/RogoJuerg/simple-crm',
+      linkPage : 'https://juergen-rogozin.de/simplecrm/',
+      description : 'This is a simple CRM-App written in TypeScript using the Angular framework and Firebase. It is still work in progress and I am currently working on it.',
       language : 'angular'
     }
   ];

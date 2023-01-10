@@ -18,9 +18,6 @@ export class ContactMeSectionComponent implements OnInit {
   }
 
   async sendMail() {
-    // action="https://w01d08b7.kasserver.com/send_mail.php" 
-    console.log('sending mail', this.myForm);
-
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;
@@ -39,18 +36,19 @@ export class ContactMeSectionComponent implements OnInit {
 
     // senden
 
-    await fetch('https://w01d08b7.kasserver.com/success.html',
+    await fetch('https://juergen-rogozin.de/send_mail.php',
       {
-        method: 'POST'
+        method: 'POST',
+        body: fd
       }
     )
 
     // Text anzeigen: Nachricht gesendet
 
-    // nameField.disabled = false;
-    // emailField.disabled = false;
-    // messageField.disabled = false;
-    // sendButton.disabled = false;
+    nameField.disabled = false;
+    emailField.disabled = false;
+    messageField.disabled = false;
+    sendButton.disabled = false;
 
 
 

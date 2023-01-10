@@ -31,7 +31,9 @@ $black: #282828;
     background-image: linear-gradient(black, rgba(128, 128, 128, 0.171));
     transform: translateX(125px);
     border-bottom-left-radius: 20%;
-    position: relative;
+    position: absolute;
+    display: none;
+    right: -300px;
 
 
 
@@ -47,9 +49,8 @@ $black: #282828;
     ul {
         display: flex;
         list-style-type: none;
-        position: absolute;
         flex-direction: column;
-        right: 32px;
+        transform: translateX(50px);
 
         li {
             font-weight: 700;
@@ -79,10 +80,10 @@ $black: #282828;
     height: 250px;
 }
 
-.closeMenu {
-    animation: openMenu 1s reverse ease-in-out !important;
-    transform: translateX(125px);
-        height: 75px;
+@media only screen and (max-width: 720px) {
+    .mobile-menu {
+        display: block;
+    }
 }
 
 
