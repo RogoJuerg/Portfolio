@@ -246,9 +246,17 @@ main {
 
         .left-side {
             margin-top: 80px;
+
             img {
                 width: 300px;
             }
         }
     }
+}
+
+.link-active {
+    background-color: #7BB8FA !important;
+    box-shadow: 0 0 10px $action,
+        0 0 20px $action;
+    color: black !important;
 }

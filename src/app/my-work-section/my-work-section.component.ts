@@ -71,11 +71,8 @@ export class MyWorkSectionComponent implements OnInit {
 
   changeSort(filter: string) {
     this.sortBy = filter;
-    console.log(this.sortBy);
-  }
 
-  scrolAnim() {
-    
+    console.log(this.sortBy);
   }
 
 }

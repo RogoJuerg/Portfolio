@@ -1,10 +1,10 @@
 <main id="myWork">
     <h2>My Work</h2>
     <div class="filter-buttons">
-        <button (click)="changeSort('all')">All</button>
+        <button [ngClass]="{'link-active' : this.sortBy == 'all'}" (click)="changeSort('all')">All</button>
         <div class="bottom-btn">
-            <button (click)="changeSort('javascript')">JavaScript</button>
-            <button (click)="changeSort('angular')">Angular</button>
+            <button [ngClass]="{'link-active' : sortBy == 'javascript'}" (click)="changeSort('javascript')">JavaScript</button>
+            <button [ngClass]="{'link-active' : this.sortBy == 'angular'}" (click)="changeSort('angular')">Angular</button>
         </div>
 
     </div>
